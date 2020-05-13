@@ -18,4 +18,6 @@ urlpatterns = [
     path("", hello.views.index, name="index"),
     path("db/", hello.views.db, name="db"),
     path("admin/", admin.site.urls),
+    path("sessions180/", include("sessions180.urls"), name="sessions180"),
+    path("", include("django.contrib.auth.urls")),
 ]

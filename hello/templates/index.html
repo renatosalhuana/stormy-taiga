@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+{% load crispy_forms_tags %}
 {% block content %}
 
 
@@ -16,13 +16,24 @@
         </a>
       <h1>180 Días de Código</h1>
       <p>Este es un Curso Virtual para quienes deseen <strong> Aprender a Programar Desde Cero</strong>. Nos enfocaremos en la creación de Aplicaciones Web <br>
-        y los temas que veremos son HTML, CSS, JavaScript, Git, Python y Django. </p>
+        y los temas que veremos son <strong> HTML, CSS, JavaScript, Git, Python y Django.</strong> </p>
         <p> Dominar estas tecnologías te servirán para crear tus propias páginas y aplicaciones web
             o <br> para encontrar un trabajo como Web Developer.</p>
 
 
     </div>
   </div>
+
+
+
+    <div class="w3-container  w3-theme-l2 w3-padding-32" style="text-align: center;">
+      <img src="{% static 'html.png'%}" width="140px" alt="HTML" style="padding: 12px;">
+      <img src="{% static 'css.png'%}" width="140px" alt="CDD" style="padding: 13px;">
+        <img src="{% static 'js.png'%}" width="140px" alt="JavaScript" style="padding: 15px;">
+        <img src="{% static 'python.png'%}" width="140px" alt="Python" style="padding: 15px;">
+    </div>
+
+
 
     <div class="w3-row w3-padding-32" style="background:#f1f1f1;">
     <div class="w3-threethird w3-container" style="text-align: center;">
@@ -55,40 +66,10 @@
 
     <div class="w3-container">
             <h2>Regístrate aquí:</h2>
-            <form action="">
-                    <div>
-                        <label for="email">E-mail: </label> <br>
-                        <input type="email" name="email" id="email" placeholder="Utilizarás este e-mail para iniciar sesión...">
-                    </div>
-                    <div>
-                        <label for="password">Password: </label>  <br>
-                        <input type="password" name="password" id="password">
-                    </div>
-                    <div>
-                        <label for="re-password">Tu password de nuevo: </label>  <br>
-                        <input type="password" name="re-password" id="re-password">
-                    </div>
-                    <div>
-                        <label for="name">Nombre: </label>  <br>
-                        <input type="text" name="name" id="name">
-                    </div>
-                    <div>
-                        <label for="lastname">Apellidos: </label>  <br>
-                        <input type="text" name="lastname" id="lastname">
-                    </div>
-                    <div>
-                        <label>¿Te gustaría contar con el coaching personal por S/35 mensuales? </label> <br>
-                        <input type="radio" id="male" name="membership" value="yes">
-                        <label for="male">Sí!</label><br>
-                        <input type="radio" id="female" name="membership" value="moreinfo">
-                        <label for="female">Me gustaría recibir más información</label><br>
-                        <input type="radio" id="other" name="membership" value="notnow">
-                        <label for="other">No por ahora</label>
-                    </div>
-                <p></p>
-                    <div>
-                        <input type="submit" value="EMPEZAR!">
-                    </div>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <input type="submit" value="EMPEZAR!">
             </form>
     </div>
 
@@ -97,16 +78,7 @@
 
 
   <footer id="myFooter" >
-    <div class="a-line"></div>
-
-    <div class="w3-container  w3-theme-l2 w3-padding-32" style="text-align: center;">
-      <img src="{% static 'html.png'%}" width="140px" alt="HTML" style="padding: 12px;">
-      <img src="{% static 'css.png'%}" width="140px" alt="CDD" style="padding: 13px;">
-        <img src="{% static 'js.png'%}" width="140px" alt="JavaScript" style="padding: 15px;">
-        <img src="{% static 'python.png'%}" width="140px" alt="Python" style="padding: 15px;">
-    </div>
-
-    <div class="a-line"></div>
+<div class="a-line"></div>
   </footer>
 
 <!-- END MAIN -->

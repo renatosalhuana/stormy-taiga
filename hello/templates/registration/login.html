@@ -1,0 +1,30 @@
+{% extends "../base.html" %}
+{% load static %}
+{% block title %}
+Login here
+{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<!-- Main content -->
+<div class="w3-main">
+  <div class="w3-row w3-padding-32">
+
+      <div class="w3-container" >
+        <a href="/" class="lang-logo">
+            <img src="{% static 'yodev-logo.png'%}">
+        </a>
+        <h2>180 Días de Código</h2>
+          <p></p>
+        <form method="POST" class="from-group">
+            {% csrf_token %}
+            {{ form|crispy}}
+            <input type="submit" class="btn btn-success" value="Ingresar!!">
+            <p>*si aún no tienes usuario, regístrate <a href="/">aquí</a></p>
+        </form>
+      </div>
+
+  </div>
+</div>
+{% endblock %}
