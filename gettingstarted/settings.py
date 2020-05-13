@@ -76,10 +76,18 @@ WSGI_APPLICATION = "gettingstarted.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3")
+        'ENGINE': 'django.db.backends.postgresql',
+        'USER': 'tynblxcshqijua',
+        'PASSWORD': 'da64de1cb35bce6609a72f6c681adcf957a23bf3d3b6f1be542e347d40182ddc',
+        'NAME': 'd2nv109uuebp4i',
     }
 }
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": os.path.join(BASE_DIR, "db.sqlite3")
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
