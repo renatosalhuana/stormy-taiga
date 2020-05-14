@@ -3,9 +3,6 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-
-
-
 <!-- Main content -->
 <div class="w3-main">
 
@@ -19,14 +16,10 @@
         y los temas que veremos son <strong> HTML, CSS, JavaScript, Git, Python y Django.</strong> </p>
         <p> Dominar estas tecnologías te servirán para crear tus propias páginas y aplicaciones web
             o <br> para encontrar un trabajo como Web Developer.</p>
-
-
     </div>
   </div>
 
-
-
-    <div class="w3-container  w3-theme-l2 w3-padding-32" style="text-align: center;">
+    <div class="w3-container  w3-theme-l2 w3-padding-16" style="text-align: center;">
       <img src="{% static 'html.png'%}" width="140px" alt="HTML" style="padding: 12px;">
       <img src="{% static 'css.png'%}" width="140px" alt="CDD" style="padding: 13px;">
         <img src="{% static 'js.png'%}" width="140px" alt="JavaScript" style="padding: 15px;">
@@ -34,10 +27,24 @@
     </div>
 
 
+<div class="w3-row" style="background:#fff;">
+
+    <div class="w3-container">
+            <h2>Regístrate aquí:</h2>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <input type="submit" value="EMPEZAR!">
+            </form>
+    </div>
+
+  </div>
+
+    <div class="a-line"></div>
 
     <div class="w3-row w3-padding-32" style="background:#f1f1f1;">
     <div class="w3-threethird w3-container" style="text-align: center;">
-        <h2>Modalidad del Curso</h2>
+        <h1>Modalidad del Curso</h1>
       <p>El curso está diseñado para que inviertas entre 1 y 2 horas diarias, <br>
         5 o 6 días a la semana durante <strong>180 días</strong> <br>
         (6 meses aprox).</p>
@@ -61,21 +68,6 @@
 
     </div>
   </div>
-
-  <div class="w3-row" style="background:#fff;">
-
-    <div class="w3-container">
-            <h2>Regístrate aquí:</h2>
-            <form method="POST">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <input type="submit" value="EMPEZAR!">
-            </form>
-    </div>
-
-  </div>
-
-
 
   <footer id="myFooter" >
 <div class="a-line"></div>

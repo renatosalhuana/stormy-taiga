@@ -9,7 +9,7 @@ def index(response):
         form = RegisterForm(response.POST)
         if form.is_valid():
             form.save()
-            return redirect("/db")
+            return redirect("/sessions180")
     else:
         form = RegisterForm()
 
