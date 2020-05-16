@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166895895-1"></script>
 <script>
@@ -57,13 +59,15 @@
 </head>
 
 <body>
+{% if user.is_authenticated %}
   <!-- Side navigation -->
   <div class="sidenav">
+            <img src="{% static 'yodev-logo.png'%}" width="120px">
+
     <a href="/sessions180">Inicio</a>
-    <a href="/view">View</a>
     <a href="/logout">Salir</a>
   </div>
-
+{% endif %}
   <!-- Page content -->
   <div class="main">
     <div class="row justify-content-center">
@@ -74,8 +78,18 @@
           {% endblock %}
         {% else %}
           <p>
-            <a href="/login">Login!</a>
+            <a href="/" class="lang-logo">
+            <img src="{% static 'yodev-logo.png'%}" width="120px">
+        </a>
           </p>
+          <p>
+            Hola!! Para poder acceder al contenido, debes <a href="/login">iniciar sesión</a> o <a href="/">crear una cuenta aquí</a> si aún no la tienes &#128516;
+
+          </p>
+        <ul>
+          <li><a href="/login">Iniciar Sesión</a></li>
+          <li><a href="/">Registrarse!</a></li>
+        </ul>
         {% endif %}
       </div>
     </div>
