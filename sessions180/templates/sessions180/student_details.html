@@ -1,0 +1,22 @@
+{% extends "sessions180/base_s.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}
+Welcome to #180_DDC!
+{% endblock %}
+
+
+{% block content %}
+<h2>Hola!! Empecemos con las presentaciones!</h2>
+
+<p>Mi nombre es Renato Salhuana y seré tu instructor durante este taller virtual
+    <br> Puedes ver un poco más de mi perfil <a href="">aquí en LinkedIn</a>
+</p>
+
+            <form method="POST" action="sessions180/">
+                {% csrf_token %}
+                {{ student_form|crispy }}
+                <input type="submit" value="Ir a la primera sesión!">
+            </form>
+
+{% endblock %}

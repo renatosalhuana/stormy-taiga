@@ -1,0 +1,13 @@
+{% extends "sessions180/base_s.html" %}
+{% block title %}
+{{ day.title }}
+{% endblock %}
+
+{% block content %}
+<h2>{{ day.title }}</h2>
+
+{% autoescape off %}
+    {{ day.body }}
+{% endautoescape %}
+
+{% endblock %}
