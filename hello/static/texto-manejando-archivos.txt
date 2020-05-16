@@ -1,0 +1,33 @@
+Manejando los archivos
+
+Un sitio web consta de varios archivos: archivos de texto, código, hojas de estilo, contenido multimedia, y así sucesivamente. 
+Cuando estás construyendo un sitio web, primero necesitas organizar todos estos archivos en tu ordenador local utilizando cierta 
+lógica, asegúrate de que estos archivos pueden comunicarse entre sí, y de que todos tus contenidos están correctos antes de 
+subirlos a un servidor. 
+
+¿En qué lugar de tu computadora debería estar tu sitio web?
+Cuando estás trabajando en un sitio web local en tu propio ordenador, debes mantener todos los archivos relacionados 
+en una sola carpeta que refleja la estructura de archivos de la página web publicada en el servidor. 
+Esta carpeta puede ubicarse en cualquier lugar que quieras, pero debes ponerlo en algún lugar donde puedas encontrarlo 
+fácilmente, tal vez en el escritorio, en la carpeta de inicio, o en la raíz de tu disco duro.
+
+Elije un lugar donde almacenar tu proyecto web. Ahí, crea una nueva carpeta llamada proyectos_web (o similar). 
+Es ahí donde ubicarás todos tus proyectos Web. Dentro de esta primera carpeta, crea otras carpetas para almacenar 
+tu primer proyecto Web. Lo llamaremos: mi-primera-web (o el nombre que prefieras).
+
+Mayúsculas, minúsculas y espacios
+
+Notarás que el nombre de la carpeta que puse como ejemplo tiene los nombres completamente en minúsculas y sin espacios. 
+Esto es porque:
+
+Muchas computadoras, particularmente servidores, son sensibles a mayúsculas y minúsculas . 
+Por ejemplo, si pones una imagen en tu sitio asi: sitio-prueba/MiImagen.jpg, y luego en un archivo diferente tratas 
+de invocarla como sitio-prueba/miimagen.jpg, ésta no se mostrará.
+
+Los Navegadores, servidores Web y los lenguajes de programación no manejan bien los espacios en blanco. 
+Por ejemplo, si usas espacios en el nombre de archivo, algunos sistemas podrían creer que en realidad se trata de dos nombres 
+de archivo. Algunos servidores reemplazan el espacio en los nombres con "%20" (código para el espacio en las URIs), 
+rompiendo todos tus enlaces. Es mejor separar las palabras con guiones: mi-archivo.html 
+
+Por estas razones, es mejor que tengas como hábito escribir el nombre de tus archivos y carpetas en minúsculas y sin espacios, 
+al menos hasta que entiendas bien cada cosa que haces, y así te evitarás algunos problemas.
