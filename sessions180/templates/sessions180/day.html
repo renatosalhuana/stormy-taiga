@@ -4,7 +4,9 @@
 {% endblock %}
 
 {% block content %}
-<h2>{{ day.title }}</h2>
+<h1 class="mt-2">{{ day.title }}</h1>
+
+<hr class="mt-0 mb-4">
 
 {% autoescape off %}
     {{ day.body }}
