@@ -1,0 +1,28 @@
+{% extends "sessions180/base_s.html" %}
+{% block title %}
+Drafts
+{% endblock %}
+
+
+{% block content %}
+<h1 class="mt-2">Showing the drafts!</h1>
+
+<hr class="mt-0 mb-4">
+
+<div class="days">
+    {% for day in days %}
+        <div class="day">
+            <h3><a href="ver/{{ day.slug }}">{{ day.title }}</a></h3>
+
+            {% if day.published %}
+                <strong> Publicado </strong>
+            {% else %}
+                <strong> Draft </strong>
+            {% endif %}
+
+            <p>{{ day.date }}</p>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
