@@ -62,8 +62,9 @@
 {% if user.is_authenticated %}
   <!-- Side navigation -->
   <div class="sidenav">
-            <img src="{% static 'yodev-logo.png'%}" width="120px">
-
+    <a href="/sessions180">
+      <img src="{% static 'yodev-logo.png'%}" width="120px" alt="Ir al inicio">
+    </a>
     <a href="/sessions180">Inicio</a>
     <a href="/logout">Salir</a>
   </div>
