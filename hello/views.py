@@ -14,9 +14,7 @@ def index(response):
             student = Student()
             student.user_id = new_user.pk
             student.save()
-            #student_form = StudentPresentationForm(response.POST, instance=student)
-            return redirect("/sessions180")
-            #return render(response, "sessions180/student_details.html", {"student_form": student_form})
+            return redirect("/login")
     else:
         form = RegisterForm()
 
